@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>puzz</title>
+</head>
+<body>
+<p id="ok"></p>
+<img src="ảnh/c1.jpg" id="an1" onclick="f1()"> <img src="ảnh/c2.jpg" id="an2" onclick="f2()">
+<br>
+<img src="ảnh/c3.jpg" id="an3" onclick="f3()"> <img src="ảnh/c4.jpg" id="an4" onclick="f4()">
+<style>
+    img {
+        width: 270px;
+        height: 270px;
+    }
+</style>
+<script>
+    let click1 = Math.floor((Math.random() * 2 + 1));
+    let click2 = Math.floor((Math.random() * 2 + 1));
+    let click3 = Math.floor((Math.random() * 2 + 1));
+    let click4 = Math.floor((Math.random() * 2 + 1));
+
+    function f1() {
+        document.getElementById("ok").innerText = ""
+        if (click1 == 1) {
+            an1.src = "ảnh/b1.jpg";
+            click1 = 2;
+        } else {
+            an1.src = "ảnh/a1.jpg";
+            click1 = 1;
+        }
+        if ((click1 === 1 && click2 === 1 && click3 === 1 && click3 === 1 && click4 === 1) || (click1 === 2 && click2 === 2 && click3 === 2 && click4 === 2)) {
+            document.getElementById("ok").innerText = "OK"
+        }
+
+    }
+
+    function f2() {
+        document.getElementById("ok").innerText = "";
+        if (click2 == 1) {
+            an2.src = "ảnh/b2.jpg";
+            click2 = 2;
+        } else {
+            an2.src = "ảnh/a2.jpg";
+            click2 = 1;
+        }
+        if ((click1 === 1 && click2 === 1 && click3 === 1 && click3 === 1 && click4 === 1) || (click1 === 2 && click2 === 2 && click3 === 2 && click4 === 2)) {
+            document.getElementById("ok").innerText = "OK"
+        }
+
+    }
+
+    function f3() {
+        document.getElementById("ok").innerText = ""
+        if (click3 == 1) {
+            an3.src = "ảnh/b3.jpg";
+            click3 = 2;
+        } else {
+            an3.src = "ảnh/a3.jpg";
+            click3 = 1;
+        }
+        if ((click1 === 1 && click2 === 1 && click3 === 1 && click3 === 1 && click4 === 1) || (click1 === 2 && click2 === 2 && click3 === 2 && click4 === 2)) {
+            document.getElementById("ok").innerText = "OK"
+        }
+
+    }
+
+    function f4() {
+        document.getElementById("ok").innerText = ""
+        if (click4 == 1) {
+            an4.src = "ảnh/b4.jpg";
+            click4 = 2;
+        } else {
+            an4.src = "ảnh/a4.jpg";
+            click4 = 1;
+        }
+        if ((click1 === 1 && click2 === 1 && click3 === 1 && click3 === 1 && click4 === 1) || (click1 === 2 && click2 === 2 && click3 === 2 && click4 === 2)) {
+            document.getElementById("ok").innerText = "OK"
+        }
+
+    }
+
+</script>
+</body>
+</html>
